@@ -27,6 +27,9 @@ function chgpal()
  elseif btnp(1) then
   cpal=cpal%#pals+1
   pal(pals[cpal])
+ elseif (t+1)%180==0 then
+  cpal=cpal%#pals+1
+  pal(pals[cpal])
  end
 end
 
@@ -64,9 +67,5 @@ function TIC()
  t=t+1
  if t%320<60 then
   print("the fire rises",(w-#("the fire rises")*11)//2,h//2,5,false,2)
- end
- if t%180==0 then
-  cpal=cpal%#pals+1
-  pal(pals[cpal])
  end
 end
